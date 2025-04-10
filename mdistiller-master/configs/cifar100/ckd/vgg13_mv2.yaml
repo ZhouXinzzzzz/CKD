@@ -1,0 +1,24 @@
+EXPERIMENT:
+  NAME: ""
+  TAG: "ckd,vgg13,mv2"
+  PROJECT: "cifar100_baselines"
+DISTILLER:
+  TYPE: "CKD"
+  TEACHER: "vgg13"
+  STUDENT: "MobileNetV2"
+SOLVER:
+  BATCH_SIZE: 32
+  EPOCHS: 480
+  LR: 0.01
+  LR_COSINE: True
+  LR_COSINE_MIN: 0.0
+  WEIGHT_DECAY: 0.0005
+  MOMENTUM: 0.9
+  TYPE: "SGD"
+CKD:
+  CE_WEIGHT: 1.0
+  CL_WEIGHT: 50.0
+  TEMPERATURE: 2.0
+
+LOG:
+  WANDB : False 

@@ -1,0 +1,24 @@
+EXPERIMENT:
+  NAME: ""
+  TAG: "ckd,wrn_40_2,wrn_16_2"
+  PROJECT: "cifar100_baselines"
+DISTILLER:
+  TYPE: "CKD"
+  TEACHER: "wrn_40_2"
+  STUDENT: "wrn_16_2"
+SOLVER:
+  BATCH_SIZE: 64
+  EPOCHS: 480
+  LR: 0.05
+  LR_COSINE: True
+  LR_COSINE_MIN: 0.0
+  WEIGHT_DECAY: 0.0005
+  MOMENTUM: 0.9
+  TYPE: "SGD"
+CKD:
+  CE_WEIGHT: 1.0
+  CL_WEIGHT: 100.0
+  TEMPERATURE: 1.0
+
+LOG:
+  WANDB : False 
